@@ -12,11 +12,10 @@
           <li><a href="listaTarea.jsp">Ver todas</a></li>
         </ul>
       </li>
-      <li><a href="#">Page 2</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="login.jsp"><span class="glyphicon glyphicon-user"></span>Entrar</a></li>
-      <li><a href="registro.jsp"><span class="glyphicon glyphicon-log-in"></span> Registrarme</a></li>
+      <li><a href="login.jsp"><span class="glyphicon glyphicon-user"></span>Iniciar sessión</a></li>
+      <!--  --><li><a href="index.jsp"><span class="glyphicon glyphicon-log-in"></span> Registrarme</a></li>
     </ul>
   </div>
 </nav>
