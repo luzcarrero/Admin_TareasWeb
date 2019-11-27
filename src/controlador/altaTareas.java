@@ -83,8 +83,7 @@ public class altaTareas extends HttpServlet {
 	
 
 	private void subtareas(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException, NumberFormatException, ClassNotFoundException, InstantiationException, IllegalAccessException{
-		Tarea tarea=DAOtarea.buscarID(Integer.parseInt(request.getParameter("id")));			
-		
+		Tarea tarea=DAOtarea.buscarID(Integer.parseInt(request.getParameter("id")));
 		RequestDispatcher dispatcher = request.getRequestDispatcher("formTarea.jsp");		
 		DAOtarea.insert(tarea);	
 		dispatcher.forward(request, response);

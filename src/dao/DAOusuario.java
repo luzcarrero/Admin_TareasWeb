@@ -60,6 +60,35 @@ public class DAOusuario {
 		
 		
 	}
+	/**
+	 * Metodo que retorna una ArrayList con los usuarios
+	 * que esten registrados en la Base de Datos
+	 * @return lista_usuarios
+	 * @throws SQLException
+	 */
+	public static ArrayList<Usuario> listaUsuarios() throws SQLException{
+		//se prepara la consulta ( "con --> variable estatica para la conexion a la DB ")
+		PreparedStatement query =con.prepareStatement("SELECT * FROM usuario");
+		//esa consulta se almacenara en un tipo de dato ResultSet; 
+		ResultSet rs= query.executeQuery();
+		//Creacion del tipo Lista usuarios que retornaremos 
+		ArrayList<Usuario> us= new ArrayList<Usuario>();
+		
+		//va leyendo una a una hasta que este vacía
+		while(rs.next()) {
+				us.add(new Usuario(						
+						rs.getInt("id"), 
+						rs.getString("nombre"),
+						rs.getString("apellido"),						
+						rs.getString("mail"), 
+						rs.getString("clave"))
+						);		
+		}	
+			query.close();
+			rs.close();		
+			
+		return us;
+	}
 	
 	
 

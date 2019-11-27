@@ -1,6 +1,9 @@
 package modelo;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+
+import dao.DAOtarea;
 import dao.DAOusuario;
 
 public class Usuario {
@@ -70,6 +73,16 @@ public class Usuario {
 		}
 	}
 	
+	public ArrayList<Usuario> obtenerListaUsuarios() throws ClassNotFoundException, InstantiationException, IllegalAccessException{
+		ArrayList<Usuario> lista = null;
+		try {
+			lista = DAOusuario.getInstance().listaUsuarios();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return lista;
+		
+	}
 	public String muestraUsuarios() {
 		String s="";
 		s+="<th scope='row'>"+getId()+"</th>"+

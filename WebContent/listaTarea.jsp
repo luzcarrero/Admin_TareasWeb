@@ -25,7 +25,7 @@
 					%>
 					<%=muestra%>					
 				</table>
-				 <a href=nuevaTarea.jsp>Nueva Nave</a>
+				
 			</div>
 		</section>
 		

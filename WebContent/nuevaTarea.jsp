@@ -20,9 +20,10 @@
 <html>
 <head>
 <%@include file="includes/head.jsp" %>
-	<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-  	<script>tinymce.init({selector:'#detalle'});</script>
-  	
+
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>tinymce.init({selector:'textarea'});</script>
+
 </head>
 <!-- BODY -->
 <body>
@@ -32,9 +33,9 @@
 
 <div class="container">
 
-  <form action="<%=request.getContextPath()%>/AltaTareas" method="post">
+  <form action="AltaTareas" method="post">
    <!-- identificador -->
-     <input type="hidden" name="id" id="id" value='<%if (request.getParameter("id")!=null)out.print(id);%>'>
+     <input type="hidden" name="id" value='<%if (request.getParameter("id")!=null)out.print(id);%>'>
     <!-- titulo -->
      <label>Titulo</label>
      <input type="text" class="form-control" name="titulo" value='<% if(request.getParameter("id") != null)	
@@ -60,8 +61,7 @@
 			  </div>
 			  
     <label>prioridad</label>
-     <select type="text" class="form-control" name="prioridad" value='<% if(request.getParameter("id") != null)	
-    		 out.print(t.getPrioridad()); %>'/>
+     <select class="form-control" name="prioridad">
      <option>1</option>
      <option>2</option>
      <option>3</option>
@@ -69,16 +69,16 @@
     
      <label>categoria</label>
   
-     <select type="text" class="form-control" name="categoria" value='<% if(request.getParameter("id") != null)	
-    		 out.print(t.getCategoria()); %>'/>
-     <option>1</option>
-     <option>2</option>
-     <option>3</option>
+     <select  class="form-control" name="categoria">
+     <option>acceso a datos</option>
+     <option>programacion</option>
+     <option>android</option>
      </select>
-    
-   
-   <input type="submit"  name="enviar" value="Guardar"/>
+     <br>
+     <input class="btn" type='submit' placeholder='Enviar' />
+     
   </form>
+  
  </div>
 		
 
