@@ -17,7 +17,7 @@
 	if (request.getParameter("id")!=null) {
 		id = request.getParameter("id");						
 	}	
-	out.print(ids);
+	
 %>
 <!DOCTYPE html>
 <html>
