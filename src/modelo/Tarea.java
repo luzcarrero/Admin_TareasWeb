@@ -168,7 +168,7 @@ public class Tarea {
   		      "<td>"+"<a href='AltaTareas?accion=showedit&id="+getId()+"'><span class='glyphicon'>&#xe065;</span>"+"</a>"+"</td>"+
   		      "<td>"+"<a href='AltaTareas?accion=borrar&id="+getId()+"'> <span class='glyphicon'>&#xe020;</span>"+"</a>"+"</td>"+
   		      "<td>"+"<a href='AltaSubtareas?idPadre="+getId()+"&tituloP="+getTitulo()+"'><span class='glyphicon'>&#xe056;</span>"+"</a>"+"</td>"+  
-  		    "	<td>"+"<a href='listaSuptareas.jsp'>ver"+"</a>"+"</td>"+  			
+  		    "	<td>"+"<a href='/WebContent/listaSuptareas.jsp'>ver"+"</a>"+"</td>"+  			
  		     
   		      "</tr>";	
 	//System.out.println(toString());
